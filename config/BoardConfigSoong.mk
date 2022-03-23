@@ -59,7 +59,10 @@ SOONG_CONFIG_pixysGlobalVars += \
     target_uses_prebuilt_dynamic_partitions \
     uses_camera_parameter_lib \
     uses_oplus_camera \
-    uses_nothing_camera
+    uses_nothing_camera \
+    target_trust_usb_control_path \
+    target_trust_usb_control_enable \
+    target_trust_usb_control_disable
 
 SOONG_CONFIG_NAMESPACES += pixysNvidiaVars
 SOONG_CONFIG_pixysNvidiaVars += \
@@ -132,6 +135,9 @@ TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB ?= libperfmgr-ext
 TARGET_QTI_VIBRATOR_EFFECT_LIB ?= libqtivibratoreffect
 TARGET_SDMCORE_HAS_IS_DISPLAY_HW_AVAILABLE_FUNC ?= true
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
+TARGET_TRUST_USB_CONTROL_PATH ?= /proc/sys/kernel/deny_new_usb
+TARGET_TRUST_USB_CONTROL_ENABLE ?= 1
+TARGET_TRUST_USB_CONTROL_DISABLE ?= 0
 
 # Soong value variables
 SOONG_CONFIG_pixysGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
@@ -151,6 +157,9 @@ SOONG_CONFIG_pixysGlobalVars_target_health_charging_control_supports_bypass := $
 SOONG_CONFIG_pixysGlobalVars_target_health_charging_control_supports_deadline := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE)
 SOONG_CONFIG_pixysGlobalVars_target_health_charging_control_supports_toggle := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE)
 SOONG_CONFIG_pixysGlobalVars_target_power_libperfmgr_mode_extension_lib := $(TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB)
+SOONG_CONFIG_pixysGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_USB_CONTROL_PATH)
+SOONG_CONFIG_pixysGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST_USB_CONTROL_ENABLE)
+SOONG_CONFIG_pixysGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
 
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_pixysQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
