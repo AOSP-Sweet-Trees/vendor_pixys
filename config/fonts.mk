@@ -61,6 +61,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FontGInterOverlay \
     FontGoogleSansOverlay \
+    FontCircularStdOverlay \
     FontHarmonySansOverlay \
     FontLinotteSourceOverlay \
     FontManropeOverlay \
@@ -85,6 +86,13 @@ PRODUCT_PACKAGES += \
     HarmonyOS-Sans-Thin.ttf \
     Lexend-VF.ttf \
     Manrope-VF.ttf \
+    Circular-Std-Bold.ttf \
+    Circular-Std-BoldItalic.ttf \
+    Circular-Std-Italic.ttf \
+    Circular-Std-Medium.ttf \
+    Circular-Std-MediumItalic.ttf \
+    Circular-Std-Regular.ttf \
+
 
 # Register vendor fonts
 PRODUCT_COPY_FILES += \
