@@ -53,7 +53,7 @@ PRODUCT_GENERIC_PROPERTIES += \
   ro.pixys.edition=$(PIXYS_EDITION)\
 
 # Signing
-ifeq (user,$(TARGET_BUILD_VARIANT))
+ifneq (eng,$(TARGET_BUILD_VARIANT))
 ifneq (,$(wildcard vendor/pixys/signing/keys/releasekey.pk8))
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/pixys/signing/keys/releasekey
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.oem_unlock_supported=1
